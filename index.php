@@ -22,10 +22,29 @@ echo json_encode($usuarios);
 //Carrega uma lista de usuários buscando pelo login
 $search = Usuario::search("jo");	
 echo json_encode($search);
-*/
+
 
 //Carrega um usuário usando o login e a senha
 $usuario = new Usuario();
 $usuario->login("root", "!@#$%123");
 echo $usuario;
+
+//Insert de um novo usuario
+
+$aluno = new Usuario("aluno", "@lun0"); //Uso do método construtor
+
+$aluno->insert();
+
+echo $aluno;
+*/
+
+// Update
+
+$usuario = new Usuario;
+
+$usuario->loadbyID(7);
+$usuario->update("professor", "1234435");
+
+echo $usuario;
+
 ?>
