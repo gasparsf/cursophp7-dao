@@ -36,7 +36,6 @@ $aluno = new Usuario("aluno", "@lun0"); //Uso do método construtor
 $aluno->insert();
 
 echo $aluno;
-*/
 
 // Update
 
@@ -46,5 +45,13 @@ $usuario->loadbyID(7);
 $usuario->update("professor", "1234435");
 
 echo $usuario;
+*/
+
+//Delete usuario
+$usuario = new Usuario;
+$usuario->loadbyID(7);
+$usuario->delete();
+echo $usuario;
+
 
 ?>
